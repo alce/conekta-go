@@ -1,20 +1,14 @@
 package main
 
 import (
-	"github.com/alce/conekta"
+	"github.com/Boletia/conekta"
 	"log"
 )
 
 var client *conekta.Client
 
 func init() {
-	// To test on a sandbox account, set CONEKTA_API_KEY environment variable
-	// os.Setenv("CONEKTA_API_KEY", "THE_KEY")
 	client = conekta.NewClient()
-
-	// To test on local server, uncomment to set the base url:
-	// u, _ := url.Parse("http://localhost:3000")
-	// client.BaseURL(u)
 }
 
 func main() {
