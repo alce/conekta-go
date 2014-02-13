@@ -2,7 +2,7 @@
 
 HEADER_ACCEPT='Accept: application/vnd.conekta-v0.3.0+json'
 HEADER_CONTENT_TYPE='Content-type: application/json'
-API_KEY='key_yZriddzfy8uV6e2C:'
+API_KEY=':'
 BASE_URL='https://api.conekta.io'
 #BASE_URL='http://localhost:3000'
 
