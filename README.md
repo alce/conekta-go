@@ -30,9 +30,3 @@ func main() {
 
   charge, err = client.Charges.Create(charge)
 ~~~
-
-
-Calls take and return a value of the same type. Charge, Plan, Customer
-Explain relationship between Charges/Charge
-
-
