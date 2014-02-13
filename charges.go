@@ -14,7 +14,7 @@ type Charge struct {
 	Amount              int            `json:"amount"`
 	Currency            string         `json:"currency"`
 	Card                string         `json:"card,omitempty"`
-	MonthlyInstallments int            `json:"monthly_installments"`
+	MonthlyInstallments int            `json:"monthly_installments,omitempty"`
 	ReferenceId         string         `json:"reference_id,omitempty"`
 	Cash                CashPayment    `json:"cash",omitempty"`
 	Bank                BankPayment    `json:"bank,omitempty"`
