@@ -27,7 +27,7 @@ func createAndUpdateCustomer() {
 
 	customer, err := client.Customers.Create(c)
 	if err != nil {
-		log.Println(err)
+		log.Fatal(err)
 	}
 	log.Println(customer.Name)
 
@@ -35,7 +35,7 @@ func createAndUpdateCustomer() {
 	customer.Name = "Xavier"
 	updatedCustomer, err := client.Customers.Update(customer.Id, customer)
 	if err != nil {
-		log.Println(err)
+		log.Fatal(err)
 	}
 	log.Println(updatedCustomer.Name)
 }
@@ -51,7 +51,7 @@ func createCardCharge() {
 
 	charge, err := client.Charges.Create(c)
 	if err != nil {
-		log.Println(err)
+		log.Fatal(err)
 	}
 
 	log.Println(charge)
@@ -65,7 +65,7 @@ func createPlan() {
 
 	plan, err := client.Plans.Create(p)
 	if err != nil {
-		log.Println(err)
+		log.Fatal(err)
 	}
 
 	log.Println(plan)
