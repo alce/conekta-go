@@ -12,7 +12,7 @@ type chargesResource struct {
 type Charge struct {
 	Description         string         `json:"description"`
 	Amount              int            `json:"amount"`
-	Capture							*bool					 `json:"capture,omitempty"`	
+	Capture							bool					 `json:"capture,omitempty"`	
 	Currency            string         `json:"currency"`
 	Card                string         `json:"card,omitempty"`
 	MonthlyInstallments int            `json:"monthly_installments,omitempty"`
