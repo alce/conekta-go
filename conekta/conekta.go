@@ -63,6 +63,7 @@ const (
 type Client struct {
 	client    *http.Client
 	userAgent string
+	ApiKey    string
 	BaseURL   *url.URL
 	Charges   *chargesResource
 	Customers *customersResource
@@ -159,12 +160,14 @@ func (c *Client) prepareRequest(method, path string, body interface{}) (*http.Re
 		return string(j)
 	}())
 
-	apiKey := os.Getenv(envConektaAPIKey)
+	if len(c.ApiKey) == 0 {
+		c.ApiKey = os.Getenv(envConektaAPIKey)
+	}
 
-	if len(apiKey) == 0 {
+	if len(c.ApiKey) == 0 {
 		return nil, GonektaError{"Missing CONEKTA_API_KEY"}
 	}
-	req.SetBasicAuth(apiKey, "")
+	req.SetBasicAuth(c.ApiKey, "")
 	return req, nil
 }
 
