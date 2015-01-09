@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/Boletia/conekta-go/conekta"
+	"github.com/nubleer/conekta-go/conekta"
 	"log"
 )
 
@@ -9,6 +9,7 @@ var client *conekta.Client
 
 func init() {
 	client = conekta.NewClient()
+	client.ApiKey = "<api_key>"
 }
 
 func main() {
@@ -59,7 +60,7 @@ func createCardCharge() {
 
 func createPlan() {
 	p := &conekta.Plan{
-		Name: "Golden Boy",
+		Name:   "Golden Boy",
 		Amount: 333333,
 	}
 

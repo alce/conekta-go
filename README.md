@@ -28,7 +28,7 @@ Get the package
 ~~~ go
 package main
 
-import "github.com/Boletia/conekta"
+import "github.com/nubleer/conekta"
 
 func main() {
   client := conekta.NewClient()
