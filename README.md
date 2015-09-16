@@ -1,6 +1,6 @@
 # Conekta
 
-Package conekta is a wrapper for the [conekta API](https://www.conekta.io/docs/api)
+Package conekta is a wrapper for the [conekta API](https://www.conekta.io/docs/api) modify by nubleer team.
 
 ## Important!!
 
@@ -12,19 +12,27 @@ First, get your account's private [API key](https://admin.conekta.io/#developers
 
     export CONEKTA_API_KEY=YOUR_PRIVATE_KEY
 
+Or
+
+``` go
+  client := conekta.NewClient()
+  client.ApiKey = "YOUR_PRIVATE_KEY"
+```
+
 Get the package
 
-    go get github.com/Boletia/conekta-go/conekta
+    go get github.com/nubleer/conekta-go/conekta
 
 ## Usage
 
 ~~~ go
 package main
 
-import "github.com/Boletia/conekta"
+import "github.com/nubleer/conekta"
 
 func main() {
   client := conekta.NewClient()
+  client.ApiKey = "YOUR_PRIVATE_KEY"
 
   charge := conekta.Charge{
     Description: "Some description",

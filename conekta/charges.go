@@ -12,6 +12,7 @@ type chargesResource struct {
 type Charge struct {
 	Description         string         `json:"description"`
 	Amount              int            `json:"amount"`
+	Capture							*bool					 `json:"capture,omitempty"`	
 	Currency            string         `json:"currency"`
 	Card                string         `json:"card,omitempty"`
 	MonthlyInstallments int            `json:"monthly_installments,omitempty"`
@@ -30,7 +31,7 @@ type Charge struct {
 	PaymentMethod       *PaymentMethod `json:"payment_method,omitempty"`
 	Details             *Details       `json:"details,omitempty"`
 	Refunds             []Refund       `json:"refunds,omitempty"`
-	Customer            *Customer      `json:"customeromitempty"`
+	Customer            *Customer      `json:"customer,omitempty"`
 }
 
 type Refund struct {
